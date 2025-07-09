@@ -3,9 +3,13 @@ import { FiBell, FiSearch } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 import MobileNavbar from "./MobileNavbar";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const linkContainer = "hidden md:flex space-x-4 text-xl gap-10 font-medium mt-2"
+  const linkStyle = "text-black hover:text-gray-300";
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -16,28 +20,12 @@ function Navbar() {
       {/* first section */}
       <div className="flex gap-15 justify-between items-center">
         <div className="text-black text-3xl font-bold">TaskMaster</div>
-        <ul className="hidden md:flex space-x-4 text-xl gap-10 font-medium mt-2">
-          <li>
-            <a href="/" className="text-black hover:text-gray-300">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/pages/tasks" className="text-black hover:text-gray-300">
-              My Tasks
-            </a>
-          </li>
-          <li>
-            <a href="/project" className="text-black hover:text-gray-300">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="/report" className="text-black hover:text-gray-300">
-              Reports
-            </a>
-          </li>
-        </ul>
+        <div className={linkContainer}>
+          <Link to="/" className={linkStyle}>Home</Link>
+          <Link to="/" className={linkStyle}>Tasks</Link>
+          <Link to="/" className={linkStyle}>Employees</Link>
+          <Link to="/" className={linkStyle}>Home</Link>
+        </div>
       </div>
 
       {/* second section */}
