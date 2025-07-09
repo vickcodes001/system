@@ -22,9 +22,9 @@ function Navbar() {
         <div className="text-black text-3xl font-bold">TaskMaster</div>
         <div className={linkContainer}>
           <Link to="/" className={linkStyle}>Home</Link>
-          <Link to="/" className={linkStyle}>Tasks</Link>
-          <Link to="/" className={linkStyle}>Employees</Link>
-          <Link to="/" className={linkStyle}>Home</Link>
+          <Link to="/tasks" className={linkStyle}>My Tasks</Link>
+          <Link to="/projects" className={linkStyle}>Projects</Link>
+          <Link to="/reports" className={linkStyle}>Reports</Link>
         </div>
       </div>
 
