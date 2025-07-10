@@ -16,7 +16,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full flex px-10 py-5 items-center justify-between bg-white shadow-xl">
+    <nav className="w-full flex px-10 py-5 items-center justify-between bg-white shadow-md">
       {/* first section */}
       <div className="flex gap-15 justify-between items-center">
         <div className="text-black text-3xl font-bold">TaskMaster</div>
