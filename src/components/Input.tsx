@@ -21,7 +21,7 @@ export function Textarea( ) {
   )
 }
 
-export function InputDate() {
+export function InputDate() { 
     const inputDateStyling = "flex items-center mt-3 justify-start h-15 py-2.5 px-3 text-gray-600 outline-none border border-gray-400 rounded-md w-[100%] md:w-100";
     return (
         <div>

@@ -5,6 +5,7 @@ import Layout from "./Layout";
 import PageNotFound from "./pages/PageNotFound";
 import Projects from "./pages/Projects";
 import Reports from "./pages/Reports";
+import Employees from "./pages/Employees";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: "/reports",
         element: <Reports />,
+      },
+      {
+        path: "/employees",
+        element: <Employees />
       },
       {
         path: "*",

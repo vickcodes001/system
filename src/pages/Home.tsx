@@ -1,13 +1,30 @@
+import Createbtn from "../components/Button";
 import Navbar from "../components/Navbar";
+import TasksCreated from "../components/TasksCreated";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <div>
-         <Navbar />
-      <h2 className="text-center pt-3 text-xl font-bold">This is the Home page</h2>
-      <p className="p-5 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam dolorem ea vel asperiores voluptatibus, itaque distinctio omnis nisi cumque voluptate neque rem. Qui ab tempora vitae impedit saepe error assumenda fugiat nostrum! Neque fugit tenetur expedita blanditiis sunt rerum tempore earum. Adipisci mollitia, odit dicta maxime modi id. Expedita voluptatibus natus, deleniti ipsum tempora esse illo iste quidem est dolorum, omnis neque autem architecto ullam consequatur blanditiis temporibus? Accusamus deserunt officia rem ad repellat quas ab quia voluptate, magni molestias similique illo! Sapiente expedita sunt eius ipsa at dolor autem quibusdam, beatae nemo similique perferendis voluptates cupiditate dolorem possimus?</p>
+      <Navbar />
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col justify-center items-start gap-5 w-full md:w-1/2 py-5 px-10">
+          <h2 className="pt-3 text-4xl font-bold text-center">Welcome to Task Manager</h2>
+          <p className="text-xl text-center md:text-start">
+            Our Task Manager App helps you create, assign, and track tasks in a
+            collaborative workspace. Making team workflow smooth from start to
+            finish
+          </p>
+        </div>
+        {/* create tasks section */}
+        <div className=" flex justify-end items-end px-10 w-1/2">
+          <Link to="/tasks"><Createbtn /></Link>
+        </div>
       </div>
+        {/* tasks created section */}
+        <div className="p-10">
+          <TasksCreated />
+        </div>
     </>
   );
 }

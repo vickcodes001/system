@@ -21,7 +21,7 @@ function Navbar() {
       <div className="flex gap-15 justify-between items-center">
         <div className="text-black text-3xl font-bold">TaskMaster</div>
         <div className={linkContainer}>
-          <Link to="/" className={linkStyle}>Home</Link>
+          {/* <Link to="/" className={linkStyle}>Home</Link> */}
           <Link to="/tasks" className={linkStyle}>My Tasks</Link>
           <Link to="/projects" className={linkStyle}>Projects</Link>
           <Link to="/reports" className={linkStyle}>Reports</Link>
@@ -41,11 +41,13 @@ function Navbar() {
         <button className="bg-gray-200 px-3 py-2 rounded-md">
           <FiBell className="h-7 w-6" />
         </button>
-        <img
-          src="/images/jiggy.jpg"
-          alt="profile image"
-          className="border h-10 w-10 rounded-full"
-        />
+        <Link to='/employees'>
+          <img
+            src="/images/jiggy.jpg"
+            alt="profile image"
+            className="border h-10 w-10 rounded-full"
+          />
+        </Link>
       </div>
       <button onClick={toggleNavbar} className="flex relative md:hidden z-50">
         {isOpen ?

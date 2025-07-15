@@ -1,9 +1,25 @@
-import { Cancelbtn, Createbtn } from "../components/Button"
+import { Cancelbtn } from "../components/Button"
+import Createbtn from "../components/Button"
 import  { Input, InputDate, Textarea } from "../components/Input"
 import Navbar from "../components/Navbar"
 import PriorityDropdown from "../components/Priority"
+import TaskAlert from "../modal/TaskAlert"
+import { useState } from "react"
 
 const Tasks = () => {
+  const [showAlert, setShowAlert] = useState(false);
+  
+
+  const handleCreateTask = () => {
+    // Logic to create a task
+    setShowAlert(true);
+  };
+
+
+  const handleCloseTask = () => {
+    setShowAlert(false)
+  }
+
   return (
     <>
       <Navbar />
@@ -31,7 +47,8 @@ const Tasks = () => {
         {/* button section */}
         <div className="flex justify-end pr-10 gap-5 w-full">
           <Cancelbtn />
-          <Createbtn />
+          <Createbtn onClick={handleCreateTask} />
+          {showAlert && <TaskAlert message="Task Created" onClose={handleCloseTask} />}
         </div>
       </div>
     </>
