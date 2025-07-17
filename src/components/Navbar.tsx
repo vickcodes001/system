@@ -51,7 +51,7 @@ function Navbar() {
       </div>
       <button onClick={toggleNavbar} className="flex relative md:hidden z-50">
         {isOpen ?
-          <p><GrClose className="w-7 h-7 absolute right-10" /></p> : // click here to close MobileNavbar
+          <p><GrClose className="w-7 h-7 absolute right-10 top-10" /></p> : // click here to close MobileNavbar
           <GiHamburgerMenu className="w-7 h-7" /> // click here to open MobileNavbar
           }
       </button>

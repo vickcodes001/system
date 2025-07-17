@@ -16,7 +16,7 @@ function TasksCreated() {
       },
       {
         id: 2,
-        title: "Fix a car bunnet",
+        title: "Repair a car bunnet",
         description: "I want to fix my car bunnet that happened last night",
         priority: "Medium",
       },
@@ -24,21 +24,14 @@ function TasksCreated() {
         id: 3,
         title: "Fix a car accelerator",
         description:
-          "I want to fix my accelerator, it just stopped working all of a sudden without any prior fault, and i just fixed it last weekend",
+          "I want to fix my accelerator, it just stopped working all of a sudden",
         priority: "Low",
       },
       {
         id: 4,
-        title: "Car Service",
+        title: "Service a car",
         description:
-          "I want to fix my accelerator, it just stopped working all of a sudden without any prior fault, and i just fixed it last weekend",
-        priority: "Medium",
-      },
-      {
-        id: 5,
-        title: "Replace Tires",
-        description:
-          "I want to fix my accelerator, it just stopped working all of a sudden without any prior fault, and i just fixed it last weekend",
+          "I want to service my car, it is due for service, do it now!",
         priority: "High",
       },
   ])

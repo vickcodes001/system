@@ -19,14 +19,15 @@ function MobileNavbar() {
     "flex items-center justify-start gap-2 text-gray-600 font-bold hover:text-gray-300";
   return (
     <>
-      <div className="flex flex-col gap-15 py-10 px-5 w-full h-[100vh]">
-        {/* <button className="absolute right-20 top-5 z-40" onClick={toggleMobile}><GrClose className=" w-7 h-7"/></button> */}
+      <div className="flex flex-col gap-15 py-25 px-5 w-full h-[100vh]">
         <div className="flex flex-col items-center justify-center ">
-          <img
-            src="/images/jiggy.jpg"
-            alt="profile image"
-            className="border h-20 w-20 rounded-full mb-5 object-cover"
-          />
+          <Link to="/employees">
+            <img
+              src="/images/jiggy.jpg"
+              alt="profile image"
+              className="border h-20 w-20 rounded-full mb-5 object-cover"
+            />
+          </Link>
           <p className="text-black text-3xl font-bold">TaskMaster</p>
         </div>
         <div>
