@@ -1,28 +1,23 @@
-const assignedTask = [
-  {
-    id: 1,
-    task: "Develop new feature",
-    status: "In Progress",
-    dueDate: "2024-08-15",
-    priority: "High",
-  },
-  {
-    id: 2,
-    task: "Fix bugs in existing code",
-    status: "In Progress",
-    dueDate: "2024-07-15",
-    priority: "Medium",
-  },
-  {
-    id: 3,
-    task: "Write unit tests",
-    status: "To Do",
-    dueDate: "2024-08-25",
-    priority: "Low",
-  },
-];
+import { useEffect, useState } from "react";
+
+type AssignedTaskType = {
+  id: number;
+  taskName: string;
+  description: string;
+  priority: string;
+  date: string;
+};
 
 const AssignedTasks = () => {
+  const [assignedTask, setAssignedTask] = useState<AssignedTaskType[]>([]);
+
+  useEffect(() => {
+    const storedAssignedTask = localStorage.getItem("Task")
+    if (storedAssignedTask) {
+      setAssignedTask(JSON.parse(storedAssignedTask))
+    }
+  }, [])
+
   return (
     <>
       <div className=" flex flex-col px-10 gap-5">
@@ -41,21 +36,21 @@ const AssignedTasks = () => {
                 key={aTasks.id}
                 className="flex w-full border border-gray-500 border-t-0 justify-between p-5 text-[20px]"
               >
-                <p className="w-1/2">{aTasks.task}</p>
-                <p className="w-1/2">{aTasks.status}</p>
-                <p className="w-1/2">{aTasks.dueDate}</p>
+                <p className="w-1/2">{aTasks.taskName}</p>
+                <p className="w-1/2">{aTasks.description}</p>
+                <p className="w-1/2">{aTasks.date}</p>
                 <div className="w-1/2">
-                    <p
-                  className={`text-sm w-20 text-center font-medium px-3 py-1 rounded-full ${
-                    aTasks.priority === "High"
-                      ? "bg-red-100 text-red-600"
-                      : aTasks.priority === "Medium"
-                      ? "bg-yellow-100 text-yellow-700"
-                      : "bg-green-100 text-green-700"
-                  }`}
-                >
-                  {aTasks.priority}
-                </p>
+                  <p
+                    className={`text-sm w-20 text-center font-medium px-3 py-1 rounded-full ${
+                      aTasks.priority === "High"
+                        ? "bg-red-100 text-red-600"
+                        : aTasks.priority === "Medium"
+                        ? "bg-yellow-100 text-yellow-700"
+                        : "bg-green-100 text-green-700"
+                    }`}
+                  >
+                    {aTasks.priority}
+                  </p>
                 </div>
               </div>
             ))}

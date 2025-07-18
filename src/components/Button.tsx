@@ -22,13 +22,4 @@ function Createbtn({ onClick }: ButtonProps) {
     );
 }
 
-export function Editbtn() {
-  const editbtn = "bg-gray-300 text-black font-bold py-3 px-5 w-[200px] rounded-md hover:bg-gray-500 transition duration-300 ease-in-out cursor-pointer";
-    return (
-      <button className={editbtn}>
-        Edit
-      </button>
-    )
-} 
-
 export default Createbtn
